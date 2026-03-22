@@ -1,0 +1,14 @@
+{
+    "name": "tripnest-lighter",
+    "version": "1.0.0",
+    "description": "A lighter themed travel site for aged family audience",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "cheerio": "^1.2.0",
+        "vite": "^5.0.0"
+    }
+}

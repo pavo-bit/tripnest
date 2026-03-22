@@ -1,0 +1,2593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripNest — Adventure & Spiritual Journeys | Best Travel Agent</title>
+    <meta
+      name="description"
+      content="TripNest offers the best adventure and spiritual tours across India. Book Himalayan treks, Char Dham Yatra, and coastal getaways with the most trusted travel partner."
+    />
+    <meta
+      name="keywords"
+      content="TripNest, travel agency, adventure tours, spiritual pilgrimage, India travel"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=Poppins:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script type="module" src="./src/main.js"></script>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    
+
+  <style id="trip-nest-fixes">
+    /* Hide the extraneous trip switching tabs in the details pane */
+    #trip-tabs { display: none !important; }
+
+    /* Force the places covered and inclusions boxes to be black text for readability */
+    #trip-detail-panel .inc-box,
+    #trip-detail-panel .inc-box *,
+    #trip-detail-panel .inc-item,
+    #trip-detail-panel .inc-item * {
+        color: #000 !important;
+    }
+
+    /* Force the itinerary and info tiles (Duration, Pickup, Departure, Pricing) to be white text */
+    #trip-detail-panel .info-tiles,
+    #trip-detail-panel .info-tiles *,
+    #trip-detail-panel .itinerary,
+    #trip-detail-panel .itinerary * {
+        color: #ffffff !important;
+    }
+  </style>
+</head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="./index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="fas fa-om"></i></div>
+          <div>
+            <span class="brand-name">TripNest</span>
+            <span class="brand-sub">Adventures &amp; Spiritual</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./trips.html" class="nav-link">Trips</a>
+          <a href="./destinations.html" class="nav-link">Destinations</a>
+          <a href="./reviews.html" class="nav-link">Reviews</a>
+          <a href="./about.html" class="nav-link">About Us</a>
+          <a href="#footer" class="nav-link">Contact</a>
+        </div>
+
+        <button id="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+      <div id="mobile-menu">
+        <a href="./index.html" class="nav-link" onclick="closeMob()">Home</a>
+        <a href="./trips.html" class="nav-link" onclick="closeMob()">Trips</a>
+        <a href="./destinations.html" class="nav-link" onclick="closeMob()"
+          >Destinations</a
+        >
+        <a href="./reviews.html" class="nav-link" onclick="closeMob()"
+          >Reviews</a
+        >
+        <a href="./about.html" class="nav-link" onclick="closeMob()">About Us</a>
+        <a href="#footer" class="nav-link" onclick="closeMob()">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-content">
+        <div class="badge badge-inv">
+          <span class="dot-pulse"></span>✦ Himalayan Adventures &amp; Spiritual
+          Pilgrimages
+        </div>
+        <h1>
+          Discover Your<br /><span class="grad-text">Next Adventure</span>
+        </h1>
+        <p>
+          Explore sacred destinations, thrilling mountain treks, and
+          unforgettable journeys across the mighty Himalayas.
+        </p>
+        <div class="search-bar">
+          <div class="s-field">
+            <i class="fas fa-map-marker-alt"></i
+            ><input
+              type="text"
+              id="search-input"
+              placeholder="Where do you want to go?"
+              onkeypress="handleSearch(event)"
+            />
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="executeSearch()">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+        <div class="hero-ctas">
+          <a href="./trips.html" class="btn btn-primary"
+            ><i class="fas fa-compass"></i> Explore Trips</a
+          >
+          <a href="./destinations.html" class="btn btn-outline"
+            ><i class="fas fa-route"></i> Destinations</a
+          >
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-num">200+</div>
+            <div class="stat-lbl">Destinations</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">5K+</div>
+            <div class="stat-lbl">Happy Travelers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">98%</div>
+            <div class="stat-lbl">Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">8+</div>
+            <div class="stat-lbl">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR TRIPS -->
+    <section id="trips" class="section page-header-gap">
+      <div class="container">
+        <div class="sec-head text-center reveal">
+          <div class="badge badge-ol">✦ Handpicked for You</div>
+          <h2>Popular Trips</h2>
+          <div class="rule"></div>
+          <p>
+            Curated adventures — from sacred Himalayan shrines to tropical shores.
+          </p>
+        </div>
+        <div class="trips-grid">
+
+          <!-- Harshil -->
+          <div class="trip-card featured reveal">
+            <div class="card-img">
+              <img
+                src="./src/assets/images/media__1774202118327.jpg"
+                alt="Harshil Valley"
+              />
+              <div class="pill pill-featured">
+                <i class="fas fa-flag"></i> New
+              </div>
+              <div class="pill pill-price">₹5,499/person</div>
+              <div class="pill pill-dur">
+                <i class="fas fa-clock"></i> 2N / 3D
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Harshil Valley Getaway</h3>
+              <p>
+                Experience the peaceful valleys, Gartang Gali, and divine temples along the Bhagirathi River.
+              </p>
+              <div class="card-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Dehradun Pickup</span><span><i class="fas fa-calendar"></i> Every Weekend</span>
+              </div>
+              <div class="card-foot">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(120)</span>
+                </div>
+                <span
+                  class="btn btn-primary btn-sm"
+                  onclick="showTrip('harshil')"
+                  style="cursor: pointer"
+                  >View Details</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Tungnath -->
+          <div class="trip-card featured reveal">
+            <div class="card-img">
+              <img
+                src="./src/assets/images/media__1774202118385.jpg"
+                alt="Tungnath Chopta"
+              />
+              <div class="pill pill-featured">
+                <i class="fas fa-flag"></i> New
+              </div>
+              <div class="pill pill-price">₹5,499/person</div>
+              <div class="pill pill-dur">
+                <i class="fas fa-clock"></i> 2N / 3D
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Tungnath & Deoria Tal Trek</h3>
+              <p>
+                Trek through rhododendron forests to the highest Shiva temple and witness the stunning Deoria Tal.
+              </p>
+              <div class="card-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Rishikesh Pickup</span><span><i class="fas fa-calendar"></i> Every Weekend</span>
+              </div>
+              <div class="card-foot">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(215)</span>
+                </div>
+                <span
+                  class="btn btn-primary btn-sm"
+                  onclick="showTrip('tungnath')"
+                  style="cursor: pointer"
+                  >View Details</span
+                >
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center" style="margin-top: 40px">
+          <a href="./trips.html" class="btn btn-outline">View All Trips <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section id="why" class="section">
+      <div class="container">
+        <div class="sec-head text-center reveal">
+          <div class="badge badge-ol">✦ Our Promise</div>
+          <h2>Why Choose Us?</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fas fa-tag"></i></div>
+            <h3>Best Price Guarantee</h3>
+            <p>
+              Find a lower price? We'll match it and give 5% extra off. No
+              questions asked.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fas fa-map"></i></div>
+            <h3>Expert Trip Planning</h3>
+            <p>
+              Seasoned Himalayan experts craft each itinerary with deep insider
+              knowledge and care.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fas fa-headset"></i></div>
+            <h3>24/7 Support</h3>
+            <p>
+              Round-the-clock assistance wherever your journey takes you —
+              always just one call away.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Safe &amp; Reliable</h3>
+            <p>
+              Fully insured trips, certified guides, and vetted stays for your
+              complete peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+
+    <!-- CATEGORIES -->
+
+    <!-- TRIP DETAIL PANEL (hidden by default, shown on View Details click) -->
+    <section
+      id="trip-detail-panel"
+      style="
+        display: none;
+        background: linear-gradient(135deg, #eef5e4, var(--ol-mist));
+        padding: 0;
+      "
+    >
+
+    <!-- GLOBAL FIX FOR TRIP PANEL TEXT COLORS AND TABS -->
+    
+
+      <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px 12px">
+        <!-- Tab bar -->
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              gap: 8px;
+              overflow-x: auto;
+              max-width: 100%;
+              padding-bottom: 4px;
+            "
+            class="hide-scrollbar"
+            id="trip-tabs"
+          >
+            <button
+              id="tab-dodham"
+              onclick="showTrip('dodham')"
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 8px 20px;
+                border-radius: 999px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.25s;
+                flex-shrink: 0;
+              "
+            >
+              Do Dham Yatra
+            </button>
+            <button
+              id="tab-saurashtra"
+              onclick="showTrip('saurashtra')"
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 8px 20px;
+                border-radius: 999px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.25s;
+                flex-shrink: 0;
+              "
+            >
+              Saurashtra Tour
+            </button>
+            <button
+              id="tab-manali"
+              onclick="showTrip('manali')"
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 8px 20px;
+                border-radius: 999px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.25s;
+                flex-shrink: 0;
+              "
+            >
+              Manali Trip
+            </button>
+            <button
+              id="tab-chardham"
+              onclick="showTrip('chardham')"
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 8px 20px;
+                border-radius: 999px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.25s;
+                flex-shrink: 0;
+              "
+            >
+              Char Dham Yatra
+            </button>
+            <button
+              id="tab-kbt"
+              onclick="showTrip('kbt')"
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 8px 20px;
+                border-radius: 999px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.25s;
+                flex-shrink: 0;
+              "
+            >
+              KBT Yatra
+            </button>
+            <button
+              id="tab-chopta"
+              onclick="showTrip('chopta')"
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 8px 20px;
+                border-radius: 999px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.25s;
+                flex-shrink: 0;
+              "
+            >
+              Chopta Trek
+            </button>
+          </div>
+          <button
+            onclick="closeDetail()"
+            style="
+              font-family: &quot;Poppins&quot;, sans-serif;
+              font-size: 0.78rem;
+              font-weight: 600;
+              padding: 8px 18px;
+              border-radius: 999px;
+              border: 2px solid rgba(90, 122, 50, 0.35);
+              background: transparent;
+              color: var(--ol-dark);
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              transition: all 0.25s;
+              flex-shrink: 0;
+            "
+            onmouseover="this.style.background = 'var(--ol-pale)'"
+            onmouseout="this.style.background = 'transparent'"
+          >
+            <i class="fas fa-times"></i> Close
+          </button>
+        </div>
+      </div>
+
+      <!-- DO DHAM CONTENT -->
+      <div
+        id="content-dodham"
+        class="section"
+        style="padding-top: 32px; padding-bottom: 50px"
+      >
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Our Signature Package</div>
+            <h2
+              style="font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-top: 10px"
+            >
+              Do Dham Yatra
+            </h2>
+            <div class="rule"></div>
+            <p>Kedarnath &amp; Badrinath · 6 Nights / 7 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img
+                  src="./src/assets/images/dodham-poster.jpg"
+                  alt="Kedarnath"
+                  style="object-position: center bottom"
+                />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <div class="it-lbl">Duration</div>
+                    <div class="it-val">6 Nights / 7 Days</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <div class="it-lbl">Pickup Point</div>
+                    <div class="it-val">Akshardham Metro, Delhi</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-calendar"></i></div>
+                  <div>
+                    <div class="it-lbl">Departure</div>
+                    <div class="it-val">Every Friday</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-rupee-sign"></i></div>
+                  <div>
+                    <div class="it-lbl">Starting From</div>
+                    <div class="it-val">₹13,499 / person</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inclusions -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  What's Included
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Delhi to Delhi Transport</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>2 Nights Guptkashi / Phatta</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>1 Night in Kedarnath</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>1 Night in Badrinath</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>4 Breakfasts</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>4 Dinners</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>All Sightseeing &amp; Treks</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Expert Tour Guide</h4></div>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/917388594640"
+                target="_blank"
+                class="btn btn-wa"
+                style="width: 100%; justify-content: center"
+                ><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book
+                Now on WhatsApp</a
+              >
+            </div>
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">1</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Delhi → Guptkashi</h4>
+                  <p>
+                    Board overnight journey from Akshardham Metro Station, Delhi
+                    towards Guptkashi.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">2</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Devprayag → Guptkashi</h4>
+                  <p>
+                    Visit Devprayag where the Bhagirathi and Alaknanda rivers
+                    merge to form the sacred Ganga. Continue to Guptkashi for
+                    overnight stay.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">3</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Trek to Kedarnath</h4>
+                  <p>
+                    Travel to Sonprayag then Gaurikund. Begin the sacred trek to
+                    Kedarnath and attend the divine evening Aarti ceremony.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">4</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Kedarnath Sightseeing</h4>
+                  <p>
+                    Visit Kedarnath Temple, Bhairavnath Temple, Bhim Sheela, and
+                    Adi Shankaracharya Cave. Trek back to Guptkashi.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">5</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Journey to Badrinath</h4>
+                  <p>
+                    Travel to Badrinath or Pandukeshwar through stunning
+                    mountain passes. Check in for overnight stay.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">6</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Badrinath &amp; Mana Village</h4>
+                  <p>
+                    Visit Badrinath Temple, Tapt Kund, and Mana Village — Ganesh
+                    Gufa, Vyasa Gufa, Bhim Pul, Saraswati River, and the Last
+                    Tea Shop of India. Begin return to Delhi.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine"><div class="day-dot">7</div></div>
+                <div class="day-cnt">
+                  <h4>Arrive Delhi</h4>
+                  <p>
+                    Reach Delhi early morning with divine blessings and lifelong
+                    memories of the Himalayas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAURASHTRA CONTENT -->
+      <div id="content-saurashtra" style="display: none" class="section">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ New Package</div>
+            <h2 style="font-size: clamp(1.4rem, 3vw, 2.4rem); margin-top: 10px">
+              Saurashtra Tour Package
+            </h2>
+            <div class="rule"></div>
+            <p>Dwarka · Somnath · Sasan Gir · 3 Nights / 4 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img
+                  src="https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800&amp;q=85&amp;auto=format&amp;fit=crop"
+                  alt="Dwarka Temple"
+                />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <div class="it-lbl">Duration</div>
+                    <div class="it-val">3 Nights / 4 Days</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <div class="it-lbl">Pick Up</div>
+                    <div class="it-val">Dwarka</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-map-pin"></i></div>
+                  <div>
+                    <div class="it-lbl">Drop</div>
+                    <div class="it-val">Veraval / Somnath Stn.</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-users"></i></div>
+                  <div>
+                    <div class="it-lbl">Min. Group</div>
+                    <div class="it-val">4 Persons Required</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pricing -->
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--ol-darkest),
+                    var(--ol-dark)
+                  );
+                  border-radius: var(--r-md);
+                  padding: 22px 24px;
+                  color: white;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 0.7rem;
+                    letter-spacing: 1px;
+                    color: #a8c97f;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                  "
+                >
+                  Package Pricing
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                  "
+                >
+                  <div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        color: rgba(255, 255, 255, 0.65);
+                      "
+                    >
+                      Per Person
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Cormorant Garamond&quot;, serif;
+                        font-size: 1.7rem;
+                        font-weight: 800;
+                        color: white;
+                      "
+                    >
+                      ₹12,499
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      width: 1px;
+                      height: 40px;
+                      background: rgba(255, 255, 255, 0.2);
+                    "
+                  ></div>
+                  <div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        color: rgba(255, 255, 255, 0.65);
+                      "
+                    >
+                      Special Couple Package
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Cormorant Garamond&quot;, serif;
+                        font-size: 1.7rem;
+                        font-weight: 800;
+                        color: #c8e878;
+                      "
+                    >
+                      ₹31,499
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inclusions -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  Package Includes
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>3 Nights Hotel / Resort Stay</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Breakfast &amp; Dinner Daily</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>All Sightseeing by Private Car</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Devaliya Park Jungle Safari</h4></div>
+                  </div>
+                  <div class="inc-item" style="grid-column: span 2">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Pick up Dwarka &amp; Drop Veraval</h4></div>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/917388594640"
+                target="_blank"
+                class="btn btn-wa"
+                style="width: 100%; justify-content: center"
+                ><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book
+                Now on WhatsApp</a
+              >
+            </div>
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">1</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Dwarka Arrival &amp; Sightseeing</h4>
+                  <p>
+                    Pick up from Dwarka. Check-in at
+                    <strong>Grand Dwarika Hotel</strong>. Breakfast &amp; Dinner
+                    included.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 5px;
+                      margin-top: 8px;
+                    "
+                  >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🛕 Dwarkadhish Temple</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🌊 Gomti Ghat</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🕉️ Nageshwar Jyotirlinga</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🏝️ Bet Dwarka</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🛕 Rukmini Temple</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >💧 Gopi Talav</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">2</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Dwarka → Somnath</h4>
+                  <p>
+                    Morning breakfast at hotel. Travel to Somnath by
+                    <strong>AC Bus or Private Car</strong>. Check-in at
+                    <strong>Hotel Amrut Inn</strong>.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 5px;
+                      margin-top: 8px;
+                    "
+                  >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🕉️ Somnath Jyotirlinga</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🌊 Triveni Sangam</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🌿 Bhalka Tirth</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🪨 Panch Pandav Gufa</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >🪔 Evening Aarti</span
+                    >
+                    <span
+                      style="
+                        background: var(--ol-pale);
+                        color: var(--ol-dark);
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        padding: 3px 10px;
+                        border-radius: 999px;
+                      "
+                      >✨ Light &amp; Sound Show</span
+                    >
+                  </div>
+                  <p style="margin-top: 8px">
+                    Dinner at hotel. Overnight stay in Somnath.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">3</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Somnath → Sasan Gir</h4>
+                  <p>
+                    Morning breakfast. Travel to Sasan Gir. Check-in at
+                    <strong>The Land of Lion Villa Resort</strong>. Includes
+                    Breakfast &amp; Dinner, Devaliya Park Jungle Safari Bus
+                    Ticket. Free time at resort.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine"><div class="day-dot">4</div></div>
+                <div class="day-cnt">
+                  <h4>Gir Jungle Safari &amp; Departure 🐯</h4>
+                  <p>
+                    Morning breakfast followed by the thrilling
+                    <strong>Gir Jungle Safari</strong>. After safari, drop at
+                    <strong>Veraval / Somnath Railway Station</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAR DHAM CONTENT -->
+      <div id="content-chardham" style="display: none" class="section">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Complete Spiritual Journey</div>
+            <h2 style="font-size: clamp(1.4rem, 3vw, 2.4rem); margin-top: 10px">
+              Char Dham Yatra Package
+            </h2>
+            <div class="rule"></div>
+            <p>Delhi - Delhi (Pick &amp; Drop) · 10 Nights / 11 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img
+                  src="./media__1773415516654.jpg"
+                  alt="Char Dham Template"
+                  style="object-position: center"
+                />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <div class="it-lbl">Duration</div>
+                    <div class="it-val">10 Nights / 11 Days</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <div class="it-lbl">Pick Up</div>
+                    <div class="it-val">Delhi Airport / Railway Stn.</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-map-pin"></i></div>
+                  <div>
+                    <div class="it-lbl">Drop</div>
+                    <div class="it-val">Delhi Airport / Railway Stn.</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-info-circle"></i></div>
+                  <div>
+                    <div class="it-lbl">Booking Policy</div>
+                    <div class="it-val">30% Advance Required</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pricing -->
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--ol-darkest),
+                    var(--ol-dark)
+                  );
+                  border-radius: var(--r-md);
+                  padding: 22px 24px;
+                  color: white;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 0.7rem;
+                    letter-spacing: 1px;
+                    color: #a8c97f;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                  "
+                >
+                  Package Pricing
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                  "
+                >
+                  <div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        color: rgba(255, 255, 255, 0.65);
+                      "
+                    >
+                      Starting From
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Cormorant Garamond&quot;, serif;
+                        font-size: 1.7rem;
+                        font-weight: 800;
+                        color: white;
+                      "
+                    >
+                      ₹34,999<span
+                        style="
+                          font-size: 0.9rem;
+                          font-weight: 400;
+                          color: rgba(255, 255, 255, 0.7);
+                        "
+                      >
+                        / person</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inclusions -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  What's Included
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Hotel Stay</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Breakfast &amp; Dinner</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Transport (Delhi-Delhi)</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Driver, Toll, Parking</h4></div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                  "
+                >
+                  Not Included
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>Pony / Doli / Helicopter</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>VIP Darshan / Entry Fees</h4></div>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/917388594640"
+                target="_blank"
+                class="btn btn-wa"
+                style="width: 100%; justify-content: center"
+                ><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book
+                Now on WhatsApp</a
+              >
+            </div>
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">1</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Delhi → Haridwar</h4>
+                  <p>
+                    Pickup from Delhi Airport / Railway Station / Home. Drive to
+                    Haridwar (220 km / 6-7 hrs). Evening Ganga Aarti at Har Ki
+                    Pauri. Dinner &amp; overnight stay in Haridwar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">2</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Haridwar → Barkot</h4>
+                  <p>
+                    Drive Haridwar → Barkot. Distance 180 km / 7-8 hrs. Enjoy
+                    beautiful Himalayan views. Dinner &amp; overnight stay in
+                    Barkot.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">3</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Barkot → Yamunotri → Barkot</h4>
+                  <p>
+                    Drive Barkot → Janki Chatti (45 km). Trek 6 km to Yamunotri
+                    Temple. Temple darshan &amp; pooja. Return trek and drive
+                    back to Barkot. Overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">4</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Barkot → Uttarkashi</h4>
+                  <p>
+                    Drive Barkot → Uttarkashi (100 km). Visit Kashi Vishwanath
+                    Temple. Dinner &amp; overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">5</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Uttarkashi → Gangotri → Uttarkashi</h4>
+                  <p>
+                    Drive Uttarkashi → Gangotri (100 km). Holy dip in Bhagirathi
+                    River. Gangotri Temple Darshan. Return to Uttarkashi.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">6</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Uttarkashi → Guptkashi</h4>
+                  <p>
+                    Drive Uttarkashi → Guptkashi. Distance 220 km / 8-9 hrs.
+                    Dinner &amp; overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">7</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Guptkashi → Kedarnath</h4>
+                  <p>
+                    Drive Guptkashi → Sonprayag → Gaurikund. Trek 16-18 km to
+                    Kedarnath Temple. Options: Pony / Doli / Helicopter.
+                    Overnight stay in Kedarnath.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">8</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Kedarnath → Guptkashi</h4>
+                  <p>
+                    Morning Kedarnath Darshan. Trek down to Gaurikund. Drive to
+                    Guptkashi. Overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">9</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Guptkashi → Badrinath</h4>
+                  <p>
+                    Drive Guptkashi → Badrinath (200 km). Visit Tapt Kund.
+                    Badrinath Temple Darshan. Overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">10</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Badrinath → Rudraprayag</h4>
+                  <p>
+                    Visit Mana Village (Last Indian Village). Drive Badrinath →
+                    Rudraprayag. Overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine"><div class="day-dot">11</div></div>
+                <div class="day-cnt">
+                  <h4>Rudraprayag → Delhi</h4>
+                  <p>
+                    Drive Rudraprayag → Delhi (400 km). Drop at Airport /
+                    Railway Station / Home.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KBT YATRA CONTENT -->
+      <div id="content-kbt" style="display: none" class="section">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Spiritual Itinerary</div>
+            <h2 style="font-size: clamp(1.4rem, 3vw, 2.4rem); margin-top: 10px">
+              Kedarnath + Badrinath + Tungnath
+            </h2>
+            <div class="rule"></div>
+            <p>Delhi - Delhi (Pick &amp; Drop) · 6 Nights / 7 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img
+                  src="./src/assets/images/media__1773426687949.jpg"
+                  alt="Kedarnath Temple"
+                  style="object-position: center 75%"
+                />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <div class="it-lbl">Duration</div>
+                    <div class="it-val">6 Nights / 7 Days</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <div class="it-lbl">Pick Up</div>
+                    <div class="it-val">
+                      Delhi Airport / Railway Stn. / Home
+                    </div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-map-pin"></i></div>
+                  <div>
+                    <div class="it-lbl">Drop</div>
+                    <div class="it-val">
+                      Delhi Airport / Railway Stn. / Home
+                    </div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-info-circle"></i></div>
+                  <div>
+                    <div class="it-lbl">Booking Policy</div>
+                    <div class="it-val">30% Advance Required</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pricing -->
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--ol-darkest),
+                    var(--ol-dark)
+                  );
+                  border-radius: var(--r-md);
+                  padding: 22px 24px;
+                  color: white;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 0.7rem;
+                    letter-spacing: 1px;
+                    color: #a8c97f;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                  "
+                >
+                  Package Pricing
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                  "
+                >
+                  <div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        color: rgba(255, 255, 255, 0.65);
+                      "
+                    >
+                      Starting From
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Cormorant Garamond&quot;, serif;
+                        font-size: 1.7rem;
+                        font-weight: 800;
+                        color: white;
+                      "
+                    >
+                      ₹18,499<span
+                        style="
+                          font-size: 0.9rem;
+                          font-weight: 400;
+                          color: rgba(255, 255, 255, 0.7);
+                        "
+                      >
+                        / person</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Temples Covered -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  📌 Temples Covered
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px">
+                  <div class="inc-item">
+                    <i class="fas fa-om"></i>
+                    <div><h4>Kedarnath Jyotirlinga</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-om"></i>
+                    <div>
+                      <h4>
+                        Tungnath Temple (Highest Shiva Temple in the world)
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-om"></i>
+                    <div><h4>Badrinath Dham</h4></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inclusions -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  ✅ What's Included
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Hotel stay</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Breakfast &amp; Dinner</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Transport (Delhi - Delhi)</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Driver, toll, parking</h4></div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                  "
+                >
+                  ❌ Not Included
+                </div>
+                <div
+                  style="display: grid; grid-template-columns: 1fr; gap: 10px"
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>Pony / Doli / Helicopter</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>VIP Darshan / entry fees</h4></div>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/917388594640"
+                target="_blank"
+                class="btn btn-wa"
+                style="width: 100%; justify-content: center"
+                ><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book
+                Now on WhatsApp</a
+              >
+            </div>
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">1</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Delhi → Haridwar</h4>
+                  <p>
+                    Pickup from Delhi Airport / Railway Station / Home. Drive to
+                    Haridwar (220 km / 6-7 hrs). Evening Ganga Aarti at Har Ki
+                    Pauri. Dinner &amp; overnight stay in Haridwar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">2</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Haridwar → Guptkashi / Sitapur</h4>
+                  <p>
+                    Drive Haridwar → Guptkashi / Sitapur (210 km / 8-9 hrs).
+                    En-route scenic Himalayan views. Dinner &amp; overnight
+                    stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">3</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Guptkashi → Kedarnath</h4>
+                  <p>
+                    Drive Guptkashi → Sonprayag → Gaurikund. Trek 16-18 km to
+                    Kedarnath Temple. Options: Pony / Doli / Helicopter. Evening
+                    Kedarnath Darshan. Overnight stay in Kedarnath.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">4</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Kedarnath → Guptkashi</h4>
+                  <p>
+                    Morning Kedarnath Darshan. Trek down to Gaurikund. Drive
+                    back to Guptkashi / Sitapur. Dinner &amp; overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">5</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Guptkashi → Chopta → Tungnath</h4>
+                  <p>
+                    Drive Guptkashi → Chopta (80 km). Trek 3.5 km to Tungnath
+                    Temple. Visit Chandrashila Peak (optional). Return to
+                    Chopta. Overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">6</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Chopta → Badrinath</h4>
+                  <p>
+                    Drive Chopta → Badrinath (160 km / 6-7 hrs). Visit Tapt
+                    Kund. Badrinath Temple Darshan. Evening visit Mana Village.
+                    Overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine"><div class="day-dot">7</div></div>
+                <div class="day-cnt">
+                  <h4>Badrinath → Delhi</h4>
+                  <p>
+                    Drive Badrinath → Delhi (500 km approx.). Drop at Airport /
+                    Railway Station / Home.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MANALI CONTENT -->
+      <div id="content-manali" style="display: none" class="section">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Winter Vibes 2026</div>
+            <h2 style="font-size: clamp(1.4rem, 3vw, 2.4rem); margin-top: 10px">
+              Manali • Sissu • Kasol ❄️
+            </h2>
+            <div class="rule"></div>
+            <p>Mountains, Snow, Music, Memories · 5 Nights / 6 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img
+                  src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&amp;q=85&amp;auto=format&amp;fit=crop"
+                  alt="Manali Snow"
+                />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <div class="it-lbl">Duration</div>
+                    <div class="it-val">5 Nights / 6 Days</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <div class="it-lbl">Pick Up</div>
+                    <div class="it-val">Akshardham Metro, Delhi</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-calendar"></i></div>
+                  <div>
+                    <div class="it-lbl">Departure</div>
+                    <div class="it-val">Every Friday</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-rupee-sign"></i></div>
+                  <div>
+                    <div class="it-lbl">Package Cost</div>
+                    <div class="it-val">₹5,999 / person</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inclusions -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  Trip Highlights
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Snow Experience &amp; Views</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Scenic Sissu Valley</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Chill vibes at Kasol</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Cozy Bonfire Night</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>High-energy DJ Night</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Daily Breakfast &amp; Dinner</h4></div>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/917388594640"
+                target="_blank"
+                class="btn btn-wa"
+                style="width: 100%; justify-content: center"
+                ><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book
+                Now on WhatsApp</a
+              >
+            </div>
+            <div class="itinerary">
+              <h3>Expect Best Vibes ✨</h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-mute);
+                  margin-bottom: 20px;
+                  line-height: 1.6;
+                "
+              >
+                Good vibes, less stress, more fun! Ideal for professionals,
+                students &amp; travel lovers to celebrate the Long Weekend.
+              </p>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">1</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Departure from Delhi</h4>
+                  <p>
+                    Evening departure from Akshardham Metro, Delhi. Overnight
+                    journey towards Manali full of excitement and introductory
+                    vibes.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">2</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Manali Arrival &amp; DJ Night</h4>
+                  <p>
+                    Check in and relax. Explore local mall road or cafes. Enjoy
+                    the High-energy DJ Night and delicious dinner.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">3</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Snow Points &amp; Sissu Valley</h4>
+                  <p>
+                    Experience the ultimate winter views. Visit the scenic Sissu
+                    Valley (via Atal Tunnel if accessible) and enjoy the snow.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">4</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Kasol &amp; Bonfire Night</h4>
+                  <p>
+                    Travel to Kasol. Soak in the chill vibes. Evening features a
+                    cozy bonfire night with music and memories.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">5</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Kasol Exploration &amp; Departure</h4>
+                  <p>
+                    Explore Kasol cafes, Parvati river side, and local market.
+                    Evening departure back towards Delhi.
+                  </p>
+                </div>
+              </div>
+              <div class="day-item">
+                <div class="day-spine"><div class="day-dot">6</div></div>
+                <div class="day-cnt">
+                  <h4>Arrive in Delhi</h4>
+                  <p>
+                    Reach Delhi with incredible memories, thousands of photos,
+                    and new friends. Trip ends.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHOPTA CONTENT -->
+      <div id="content-chopta" style="display: none" class="section">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Adventure &amp; Nature</div>
+            <h2 style="font-size: clamp(1.4rem, 3vw, 2.4rem); margin-top: 10px">
+              Chopta – Tungnath – Chandrashila Trek
+            </h2>
+            <div class="rule"></div>
+            <p>Delhi - Chopta - Delhi · 5 Days / 4 Nights Adventure Trip</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img
+                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&amp;q=85&amp;auto=format&amp;fit=crop"
+                  alt="Chopta Mountains"
+                />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <div class="it-lbl">Duration</div>
+                    <div class="it-val">4 Nights / 5 Days</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <div class="it-lbl">Pick Up</div>
+                    <div class="it-val">Delhi</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-map-pin"></i></div>
+                  <div>
+                    <div class="it-lbl">Drop</div>
+                    <div class="it-val">Delhi</div>
+                  </div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-rupee-sign"></i></div>
+                  <div>
+                    <div class="it-lbl">Package Cost</div>
+                    <div class="it-val">₹7,499 / person</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inclusions -->
+              <div
+                style="
+                  background: var(--white);
+                  border: 1px solid rgba(90, 122, 50, 0.18);
+                  border-radius: var(--r-md);
+                  padding: 20px 22px;
+                  margin-bottom: 18px;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-bottom: 12px;
+                  "
+                >
+                  ✅ What's Included
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  "
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>Transport in Deluxe Bus/Tempo Traveler</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                      <h4>2 Nights Accommodation in Swiss tents/Homestays</h4>
+                    </div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><h4>2 Breakfasts and 2 Dinners</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                      <h4>Guided Trek to Tungnath &amp; Chandrashila</h4>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Cormorant Garamond&quot;, serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--text-dark);
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                  "
+                >
+                  ❌ Not Included
+                </div>
+                <div
+                  style="display: grid; grid-template-columns: 1fr; gap: 10px"
+                >
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>Any meals not mentioned (like lunches)</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>Personal expenses (porters, mules)</h4></div>
+                  </div>
+                  <div class="inc-item">
+                    <i class="fas fa-times-circle" style="color: #d9534f"></i>
+                    <div><h4>Any entry fees or permits required</h4></div>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/917388594640"
+                target="_blank"
+                class="btn btn-wa"
+                style="width: 100%; justify-content: center"
+                ><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book
+                Now on WhatsApp</a
+              >
+            </div>
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">1</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Overnight Journey – Delhi to Chopta</h4>
+                  <p>
+                    Reach the pickup point in Delhi and start the overnight
+                    journey to Chopta. (Dinner self-paid).
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">2</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Arrival at Chopta via Devprayag</h4>
+                  <p>
+                    Freshen up at Devprayag, witness the Sangam, and reach
+                    Chopta campsite by afternoon. Dinner and overnight stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">3</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Trek to Tungnath &amp; Chandrashila</h4>
+                  <p>
+                    Trek 3.5 km to Tungnath and an additional 1.5 km to
+                    Chandrashila Peak. Return to Chopta for bonfire &amp;
+                    dinner.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine">
+                  <div class="day-dot">4</div>
+                  <div class="day-line"></div>
+                </div>
+                <div class="day-cnt">
+                  <h4>Deoria Tal &amp; Departure</h4>
+                  <p>
+                    Short 2.5 km trek to Deoria Tal from Sari Village. Return
+                    and board transport to Delhi.
+                  </p>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="day-spine"><div class="day-dot">5</div></div>
+                <div class="day-cnt">
+                  <h4>Arrival in Delhi</h4>
+                  <p>Reach Delhi in the morning. Trip Ends.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- HARSHIL CONTENT -->
+      <div id="content-harshil" class="section" style="display: none; padding-top: 32px; padding-bottom: 50px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Beautiful Valleys</div>
+            <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-top: 10px">Harshil Valley Getaway</h2>
+            <div class="rule"></div>
+            <p>Dehradun - Harshil - Dehradun · 2 Nights / 3 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img src="./src/assets/images/media__1774202118327.jpg" alt="Harshil Valley" style="object-position: center bottom" />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div><div class="it-lbl">Duration</div><div class="it-val">2 Nights / 3 Days</div></div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div><div class="it-lbl">Pickup Point</div><div class="it-val">Dehradun</div></div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-calendar"></i></div>
+                  <div><div class="it-lbl">Departure</div><div class="it-val">Every Weekend</div></div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-rupee-sign"></i></div>
+                  <div><div class="it-lbl">Starting From</div><div class="it-val">₹5,499 / person</div></div>
+                </div>
+              </div>
+              
+              <!-- Temples Covered -->
+              <div class="inc-box" style="background: var(--white); border: 1px solid rgba(90, 122, 50, 0.18); border-radius: var(--r-md); padding: 20px 22px; margin-bottom: 18px;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--ol-darkest); margin-bottom: 12px;">📌 Temples Covered</div>
+                <div style="display: flex; flex-direction: column; gap: 8px">
+                  <div class="inc-item"><i class="fas fa-om"></i><div><h4>Mukhba Temple (Winter seat of Goddess Ganga)</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-om"></i><div><h4>Kashi Vishwanath Temple (Uttarkashi)</h4></div></div>
+                </div>
+              </div>
+
+              <!-- Inclusions -->
+              <div class="inc-box" style="background: var(--white); border: 1px solid rgba(90, 122, 50, 0.18); border-radius: var(--r-md); padding: 20px 22px; margin-bottom: 18px;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--ol-darkest); margin-bottom: 12px;">✅ What's Included</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Hotel stay</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Breakfast & Dinner</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Transport (Dehradun - Dehradun)</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Driver, toll, parking</h4></div></div>
+                </div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--ol-darkest); margin-top: 20px; margin-bottom: 12px;">❌ Not Included</div>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 10px">
+                  <div class="inc-item"><i class="fas fa-times-circle" style="color: #d9534f"></i><div><h4>Any Entry fees / Specific sightseeing tickets</h4></div></div>
+                </div>
+              </div>
+              <a href="https://wa.me/917388594640" target="_blank" class="btn btn-wa" style="width: 100%; justify-content: center"><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book Now on WhatsApp</a>
+            </div>
+            
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+              <div style="position: relative; padding-left: 20px; border-left: 2px dashed rgba(90,122,50,0.3); display: flex; flex-direction: column; gap: 30px;">
+                <div style="position: relative">
+                  <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ol-bright); border: 2px solid var(--ol-dark);"></div>
+                  <div class="day-hd">Day 1: Departure to Harshil</div>
+                  <div class="day-cnt">
+                    <p><strong>Morning:</strong> Depart early from Dehradun (around 6:00 AM) to avoid traffic and enjoy the mountain views.</p>
+                    <p><strong>Afternoon:</strong> Drive via Mussoorie, Chinyalisaur, and Uttarkashi.</p>
+                    <p><strong>Evening:</strong> Arrive in Harshil, check into your riverside homestay or hotel, and enjoy a peaceful walk along the Bhagirathi River.</p>
+                    <p><strong>Night:</strong> Riverside Bonfire & Music Night. Relax under the starlit Himalayan sky.</p>
+                  </div>
+                </div>
+                <div style="position: relative">
+                  <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ol-bright); border: 2px solid var(--ol-dark);"></div>
+                  <div class="day-hd">Day 2: Gartang Gali & Uttarkashi</div>
+                  <div class="day-cnt">
+                    <p><strong>Morning:</strong> Visit Mukhba temple (winter seat of Goddess Ganga) offering a peaceful look into local religious traditions.</p>
+                    <p><strong>Afternoon:</strong> Head to Gartang Gali. This historic 150-year-old wooden skywalk offers a thrilling trek along the cliffside of the Nelong Valley.</p>
+                    <p><strong>Evening:</strong> Reach Uttarkashi and check into your hotel. Visit the Kashi Vishwanath Temple for the evening Aarti if time permits.</p>
+                    <p><strong>Night:</strong> Bonfire & Music at your Uttarkashi stay.</p>
+                  </div>
+                </div>
+                <div style="position: relative">
+                  <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ol-bright); border: 2px solid var(--ol-dark);"></div>
+                  <div class="day-hd">Day 3: Return to Dehradun</div>
+                  <div class="day-cnt">
+                    <p><strong>Morning:</strong> Visit the Nehru Institute of Mountaineering (NIM) or take a peaceful walk across the Joshiyara Suspension Bridge.</p>
+                    <p><strong>Afternoon:</strong> Depart for Dehradun. Stop at Chinyalisaur for a view of the Tehri Lake backwaters.</p>
+                    <p><strong>Evening:</strong> Reach Dehradun by 6:00 PM.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUNGNATH CONTENT -->
+      <div id="content-tungnath" class="section" style="display: none; padding-top: 32px; padding-bottom: 50px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+          <div class="sec-head text-center" style="margin-bottom: 36px">
+            <div class="badge badge-ol">✦ Mountain Trek</div>
+            <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-top: 10px">Tungnath & Deoria Tal Trek</h2>
+            <div class="rule"></div>
+            <p>Rishikesh - Chopta - Rishikesh · 2 Nights / 3 Days</p>
+          </div>
+          <div class="dd-grid">
+            <div>
+              <div class="dd-img">
+                <img src="./src/assets/images/media__1774202118385.jpg" alt="Tungnath Temple" style="object-position: center bottom" />
+              </div>
+              <div class="info-tiles">
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-clock"></i></div>
+                  <div><div class="it-lbl">Duration</div><div class="it-val">2 Nights / 3 Days</div></div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div><div class="it-lbl">Pickup Point</div><div class="it-val">Rishikesh/Dehradun</div></div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-calendar"></i></div>
+                  <div><div class="it-lbl">Departure</div><div class="it-val">Every Weekend</div></div>
+                </div>
+                <div class="info-tile">
+                  <div class="it-icon"><i class="fas fa-rupee-sign"></i></div>
+                  <div><div class="it-lbl">Starting From</div><div class="it-val">₹5,499 / person</div></div>
+                </div>
+              </div>
+              
+              <!-- Temples Covered -->
+              <div class="inc-box" style="background: var(--white); border: 1px solid rgba(90, 122, 50, 0.18); border-radius: var(--r-md); padding: 20px 22px; margin-bottom: 18px;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--ol-darkest); margin-bottom: 12px;">📌 Temples Covered</div>
+                <div style="display: flex; flex-direction: column; gap: 8px">
+                  <div class="inc-item"><i class="fas fa-om"></i><div><h4>Dhari Devi Temple</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-om"></i><div><h4>Tungnath Temple (Highest Shiva Temple)</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-om"></i><div><h4>Omkareshwar Temple (Ukhimath)</h4></div></div>
+                </div>
+              </div>
+
+              <!-- Inclusions -->
+              <div class="inc-box" style="background: var(--white); border: 1px solid rgba(90, 122, 50, 0.18); border-radius: var(--r-md); padding: 20px 22px; margin-bottom: 18px;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--ol-darkest); margin-bottom: 12px;">✅ What's Included</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Hotel stay</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Breakfast & Dinner</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Transport (Delhi - Delhi)</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-check-circle"></i><div><h4>Driver, toll, parking</h4></div></div>
+                </div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--ol-darkest); margin-top: 20px; margin-bottom: 12px;">❌ Not Included</div>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 10px">
+                  <div class="inc-item"><i class="fas fa-times-circle" style="color: #d9534f"></i><div><h4>Pony / Doli / Helicopter</h4></div></div>
+                  <div class="inc-item"><i class="fas fa-times-circle" style="color: #d9534f"></i><div><h4>VIP Darshan / Entry fees</h4></div></div>
+                </div>
+              </div>
+              <a href="https://wa.me/917388594640" target="_blank" class="btn btn-wa" style="width: 100%; justify-content: center"><i class="fab fa-whatsapp" style="font-size: 1.1rem"></i> Book Now on WhatsApp</a>
+            </div>
+            
+            <div class="itinerary">
+              <h3>Day-by-Day Itinerary</h3>
+              <div style="position: relative; padding-left: 20px; border-left: 2px dashed rgba(90,122,50,0.3); display: flex; flex-direction: column; gap: 30px;">
+                <div style="position: relative">
+                  <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ol-bright); border: 2px solid var(--ol-dark);"></div>
+                  <div class="day-hd">Day 1: Arrival in Chopta</div>
+                  <div class="day-cnt">
+                    <p><strong>Morning:</strong> Depart Dehradun/Rishikesh early to reach Devprayag for the holy confluence; afterward, continue toward Srinagar and a scenic drive along the Alaknanda.</p>
+                    <p><strong>Afternoon:</strong> Visit Dhari Devi Temple for darshan, before ascending through the lush, winding forests of Ukhimath toward the higher altitudes.</p>
+                    <p><strong>Evening:</strong> Arrive in Chopta to witness the sunset over the Himalayan peaks, followed by a quiet evening of stargazing and a warm dinner.</p>
+                  </div>
+                </div>
+                <div style="position: relative">
+                  <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ol-bright); border: 2px solid var(--ol-dark);"></div>
+                  <div class="day-hd">Day 2: Tungnath Temple & Chandrashila</div>
+                  <div class="day-cnt">
+                    <p><strong>Morning:</strong> Begin your climb with a hot mountain breakfast in the meadows, then trek through the rhododendron forests to reach the ancient Tungnath Temple and the towering Chandrashila Peak.</p>
+                    <p><strong>Afternoon:</strong> Spend some time at the summit for photography before beginning your descent back to Tungnath for a quick break and then continuing down to the base at Chopta.</p>
+                    <p><strong>Evening:</strong> Return to your stay to relax your legs, enjoy a hot early dinner, and soak in the peaceful evening vibes of the meadows as the sun sets.</p>
+                  </div>
+                </div>
+                <div style="position: relative">
+                  <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--ol-bright); border: 2px solid var(--ol-dark);"></div>
+                  <div class="day-hd">Day 3: Deoria Tal & Return</div>
+                  <div class="day-cnt">
+                    <p><strong>Morning:</strong> Enjoy an early breakfast at your stay in Chopta before driving to Sari village to begin the trek to Deoria Tal for the stunning lake reflection of the Himalayas.</p>
+                    <p><strong>Afternoon:</strong> Visit the ancient Omkareshwar Temple in Ukhimath before starting the long drive back through the scenic mountain valleys.</p>
+                    <p><strong>Evening:</strong> Enjoy a scenic drive through the winding "Ghats", arriving back in Rishikesh/Dehradun by nightfall to celebrate the end of your journey.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- REVIEWS -->
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="sec-head text-center reveal">
+          <div class="badge badge-ol">✦ Visual Journeys</div>
+          <h2>Photo Gallery</h2>
+          <div class="rule"></div>
+          <p style="max-width: 600px; margin: 0 auto; color: var(--text-mute)">
+            A curated glimpse into the spectacular landscapes and sacred corners
+            of the world through our lens.
+          </p>
+        </div>
+        <div class="gal-grid">
+          <!-- Main Large Photo (2x2) -->
+          <div class="gal-item g-main reveal">
+            <img src="./src/assets/images/media__1773427842772.jpg" alt="Badrinath Temple" />
+            <div class="gal-overlay"><span>Badrinath Temple</span></div>
+          </div>
+          <!-- Smaller Photos (1x1) -->
+          <div class="gal-item reveal" style="animation-delay: 0.1s">
+            <img src="./src/assets/images/media__1773427842741.jpg" alt="Wildlife Safari" />
+            <div class="gal-overlay"><span>Wildlife Safari</span></div>
+          </div>
+          <div class="gal-item reveal" style="animation-delay: 0.2s">
+            <img src="./src/assets/images/media__1773428332919.jpg" alt="Tungnath Temple" />
+            <div class="gal-overlay"><span>Tungnath</span></div>
+          </div>
+          <div class="gal-item reveal" style="animation-delay: 0.1s">
+            <img src="./src/assets/images/media__1773427842765.jpg" alt="Snow Trekking" />
+            <div class="gal-overlay"><span>Snow Trekking</span></div>
+          </div>
+          <div class="gal-item reveal" style="animation-delay: 0.2s">
+            <img src="./src/assets/images/media__1773428347008.jpg" alt="Somnath Temple" />
+            <div class="gal-overlay"><span>Somnath</span></div>
+          </div>
+          <!-- Wide Photos (2x1) -->
+          <div class="gal-item g-wide reveal">
+            <img src="./src/assets/images/media__1773427842712.jpg" alt="Tungnath Peaks" />
+            <div class="gal-overlay"><span>Tungnath Peaks</span></div>
+          </div>
+          <div class="gal-item g-wide reveal" style="animation-delay: 0.1s">
+            <img src="./src/assets/images/media__1773428342551.jpg" alt="Kedarnath Shrine" />
+            <div class="gal-overlay"><span>Kedarnath Shrine</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+
+    <!-- CTA -->
+    <section id="cta">
+      <div class="cta-inner reveal">
+        <div class="cta-icon">🙏</div>
+        <h2>
+          Ready for Your<br /><span class="grad-text">Next Adventure?</span>
+        </h2>
+        <p>
+          Join thousands of spiritual seekers and adventure lovers who've
+          trusted TripNest with their most sacred journeys.
+        </p>
+        <div class="cta-btns">
+          <a
+            href="https://wa.me/917388594640"
+            target="_blank"
+            class="btn btn-white"
+            ><i
+              class="fab fa-whatsapp"
+              style="color: #25d366; font-size: 1.1rem"
+            ></i>
+            Book This Trip</a
+          >
+          <a href="/trips.html" class="btn btn-outline"
+            ><i class="fas fa-compass"></i> Explore More Trips</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 50px">
+        <div
+          class="nav-logo"
+          style="margin-bottom: 15px; justify-content: center"
+        >
+          <div class="nav-logo-icon"><i class="fas fa-om"></i></div>
+          <div style="text-align: left">
+            <span class="brand-name">TripNest</span
+            ><span class="brand-sub">Adventures &amp; Spiritual</span>
+          </div>
+        </div>
+        <p
+          class="footer-brand-p"
+          style="margin: 0 auto 20px; text-align: center"
+        >
+          Your trusted partner for Himalayan adventures and sacred spiritual
+          pilgrimages. Crafting unforgettable journeys since 2016.
+        </p>
+        <div class="social-row" style="justify-content: center">
+          <a
+            href="https://www.instagram.com/trip.nest13"
+            target="_blank"
+            class="soc-btn"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/share/1AoTvx5ioE/" target="_blank" class="soc-btn"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://x.com/tripnest13" target="_blank" class="soc-btn"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://youtube.com/@tripnest13?si=5_s_qWp5QZLOsebZ" target="_blank" class="soc-btn"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="foot-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/about.html" class="foot-link">About Us</a></li>
+            <li><a href="/trips.html" class="foot-link">Popular Trips</a></li>
+            <li>
+              <a href="/destinations.html" class="foot-link">Destinations</a>
+            </li>
+            <li><a href="/reviews.html" class="foot-link">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <div class="con-item">
+            <i class="fas fa-user"></i><span>Kartikesh Kumar</span>
+          </div>
+          <div class="con-item">
+            <i class="fas fa-building"></i><span>TripNest</span>
+          </div>
+          <div class="con-item">
+            <i class="fas fa-phone-alt"></i><span>+91 73885 94640</span>
+          </div>
+          <div class="con-item">
+            <i class="fas fa-globe"></i><span>tripnest.in</span>
+          </div>
+          <div class="con-item">
+            <i class="fas fa-envelope"></i
+            ><span
+              ><a href="mailto:tripnest13@gmail.com"
+                >tripnest13@gmail.com</a
+              ></span
+            >
+          </div>
+          <a
+            href="https://wa.me/917388594640"
+            target="_blank"
+            class="btn btn-wa btn-sm"
+            style="margin-top: 15px; display: inline-flex"
+            ><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>
+          © 2024 TripNest. All rights reserved. Made with ❤️ for spiritual
+          seekers &amp; adventurers.
+        </p>
+        <div class="foot-links">
+          <a href="policies.html#privacy">Privacy Policy</a>
+          <a href="policies.html#terms">Terms</a>
+          <a href="policies.html#refund">Refund Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/917388594640"
+      target="_blank"
+      class="wa-float"
+      title="Book on WhatsApp"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+  </body>
+</html>
